@@ -71,11 +71,14 @@ const HeroBanner = () => {
           }
         }
       `}</style>
-      <div className="hero-banner-five bg-white z-2 position-relative pt-200 md-pt-150">
+      <div className="hero-banner-five bg-white z-2 position-relative pt-150 md-pt-150">
         <div className="container container-large">
           <div className="position-relative">
             <div className="row">
               <div className="col-lg-7">
+              <h6 className="wow fadeInUp mb-50">
+              Your Smart Nutrition AI Assistant
+                  </h6>
                 <div className="position-relative z-1">
                   <h1 className="hero-heading wow fadeInUp mb-50">
                     We Take Care About Your Health
@@ -88,11 +91,11 @@ const HeroBanner = () => {
                   <div className="row">
                     <div className="col-xl-7 col-lg-12 col-md-7">
                       <p
-                        className="fs-24 color-dark m0 lg-pb-20 wow fadeInUp"
+                        className="fs-20 color-dark m0 lg-pb-20 wow fadeInUp"
                         data-wow-delay="0.1s"
                       >
                         Make sure your daily nutrition is sufficient.Consult
-                        your problem aout nutrition with us
+                        your problem about nutrition with us
                       </p>
                     </div>
                   </div>
