@@ -23,7 +23,7 @@ const category_data: DataType[] = [
       id: 1,
       page: "home_3",
       icon: categoryIcon_1,
-      text: "Nutrition",
+      text: "Nutrition Plans",
    },
    {
       id: 2,
@@ -35,31 +35,25 @@ const category_data: DataType[] = [
       id: 3,
       page: "home_3",
       icon: categoryIcon_3,
-      text: "Vitamins",
+      text: "Vitamins & Minerals",
    },
    {
       id: 4,
       page: "home_3",
       icon: categoryIcon_4,
-      text: "Industry",
+      text: "Healthy Recipes",
    },
    {
       id: 5,
       page: "home_3",
       icon: categoryIcon_5,
-      text: "HealthyFood",
+      text: "Wellness Goals",
    },
    {
       id: 6,
       page: "home_3",
       icon: categoryIcon_6,
-      text: "Medical",
-   },
-   {
-      id: 7,
-      page: "home_3",
-      icon: categoryIcon_7,
-      text: "Consulation",
+      text: "AI Consultations",
    }
 ]
 
