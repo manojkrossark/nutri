@@ -20,16 +20,16 @@ const HomeFive = () => {
          <HeaderThree />
          <HeroBanner />
          <Category />
-         <BLockFeatureOne />
-        <Brand />
+     {/*     <BLockFeatureOne />
+        <Brand /> */}
          <PropertyOne style_1={true} style_2={false} />
          <BLockFeatureTwo style={false} />
          <BLockFeatureThree />
          <BLockFeatureFour />
-         <FancyBannerOne style={true} />
-         <AgentArea style={true} />
-         <Feedback style={false} />
-         <AddressBanner style={true} />
+{/*          <FancyBannerOne style={true} />
+         <AgentArea style={true} /> */}
+     {/*     <Feedback style={false} />
+         <AddressBanner style={true} /> */}
          <FancyBanner style={true} />
          <FooterFour />
       </>

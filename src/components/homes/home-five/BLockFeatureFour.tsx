@@ -14,14 +14,15 @@ const BLockFeatureFour = () => {
                <div className="col-lg-6 ms-auto order-lg-last wow fadeInRight">
                   <div className="pb-50 ps-xxl-5 position-relative z-1">
                      <div className="feedback-block-two">
-                        <blockquote className="font-garamond">&quot;Extraordinary <span>service!</span>  Quick solutions. Highly recommended.&quot;</blockquote>
-                        <div className="d-flex align-items-center mt-75 md-mt-50">
+                        <blockquote className="font-garamond">&quot;Simply share your details and goals, and let our AI-powered system do the rest. <span>It's not just food,
+                        It's a lifestyle!</span>  Quick solutions. Highly recommended.&quot;</blockquote>
+                        {/* <div className="d-flex align-items-center mt-75 md-mt-50">
                            <Image src={featureImg_1} alt="" className="rounded-circle avatar" />
                            <div className="ps-4">
                               <h6 className="fs-22 mb-5">James Bond.</h6>
-                              <span className="opacity-75">CEO & Head of Homy Inc</span>
+                              <span className="opacity-75">CEO & Head of  Inc</span>
                            </div>
-                        </div>
+                        </div> */}
                      </div>
 
                      <div className="wrapper mt-70 xl-mt-50 md-mt-20">

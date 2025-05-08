@@ -73,15 +73,15 @@ const feature_data: DataType[] = [
       id: 1,
       page: "home_1_feature_2",
       item_bg: "card-1",
-      title: "Kelowna",
-      desc: "1,230 Properties",
+      title: "AI-Powered Meal Plans",
+      desc: "Smart suggestions tailored to your health goals, mood, and environment using generative AI."
    },
    {
       id: 2,
       page: "home_1_feature_2",
       item_bg: "card-2",
-      title: "California",
-      desc: "1190 Properties",
+      title: "Personalized Nutrition",
+      desc: "We understand your unique needs—from blood sugar levels to daily activity and energy."
    },
    {
       id: 3,
@@ -226,14 +226,23 @@ const feature_data: DataType[] = [
 
    // home_3_feature_1
 
-   {
+/*    {
       id: 1,
       page: "home_3_feature_1",
       icon: feature5Icon_1,
       title: "Buy a home",
       btn: "Find Home",
       desc: "Explore homy’s 2 million+ homes and uncover your ideal living space.",
-   },
+   }, */
+   {
+      id: 1,
+      page: "home_3_feature_1",
+      icon: feature5Icon_1,
+      title: "Fit Start Plan",
+      btn: "Start Free",
+      desc: "Enjoy 3 AI-personalized meal plans per week — tailored for your goals, totally free.",
+      data_delay_time: "0.3s"
+    },
    {
       id: 2,
       page: "home_3_feature_1",
@@ -286,22 +295,31 @@ const feature_data: DataType[] = [
       icon: feature6Icon_1,
       title: "Buy a home",
       btn: "Find Home",
-      desc: "Explore homy’s 2 million+ homes and uncover your ideal living space.",
+      desc: "Consult The Best Nutrition For Your Child",
    },
    {
       id: 2,
       page: "home_4_feature_1",
       icon: feature6Icon_2,
-      title: "Rent a home",
+      title: "",
       btn: "Rent Home",
-      desc: "Discover a rental you'll love on homy, thanks to 35+ filters and tailored keywords.",
+      desc: "Consult Diet Foods That Are Suitable For Your Body",
       data_delay_time: "0.1s",
    },
    {
       id: 3,
       page: "home_4_feature_1",
       icon: feature6Icon_3,
-      title: "Sell a home",
+      title: "",
+      btn: "Sell Property",
+      desc: "Discover our supplement products",
+      data_delay_time: "0.2s",
+   },
+   {
+      id: 4,
+      page: "home_4_feature_1",
+      icon: feature6Icon_3,
+      title: "",
       btn: "Sell Property",
       desc: "List, sell, thrive – with our top-notch real estate agency. It’s super easy & fun.",
       data_delay_time: "0.2s",

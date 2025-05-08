@@ -569,7 +569,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   userMessageContainer: {
     backgroundColor: "#fff",
-    color: "#FF6725",
+    color: "#D1FFBD",
     padding: "10px 15px",
     borderRadius: "20px",
     fontSize: "16px",
@@ -608,7 +608,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   //   alignSelf: "flex-end",
   //   maxWidth: "80%",
   //   backgroundColor: "#fff",
-  //   color: "#FF6725",
+  //   color: "#D1FFBD",
   //   padding: "10px",
   //   borderRadius: "40px",
   //   textAlign: "left",
@@ -646,7 +646,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     outline: "none",
   },
   sendButton: {
-    backgroundColor: "#FF6725",
+    backgroundColor: "#D1FFBD",
     color: "#fff",
     padding: "10px",
     borderRadius: "70px",

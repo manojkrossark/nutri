@@ -6,16 +6,38 @@ const FeatureOne = () => {
    return (
       <>
          {feature_data.filter((items) => items.page === "home_4_feature_1").map((item) => (
-            <div key={item.id} className="col-lg-4 col-md-6 mt-30 d-flex wow fadeInUp" data-wow-delay={item.data_delay_time}>
-               <div className="card-style-six d-inline-flex flex-column align-items-start tran3s h-100 w-100">
-                  <div className="icon d-flex align-items-center justify-content-center rounded-circle tran3s">
-                     <Image src={item.icon ? item.icon : ""} alt="" className="lazy-img" />
-                  </div>
-                  <h5 className="mt-35 mb-20">{item.title}</h5>
-                  <p className="mb-40">{item.desc}</p>
-                  <Link href="/listing_03" className="btn-twelve rounded-0 sm mt-auto">{item.btn}</Link>
-               </div>
-            </div>
+  <div className="card-custom position-relative d-flex align-items-center p-4 rounded-4" style={{
+   background: 'linear-gradient(135deg, #f9f9f9, #ececec)', // gradient background
+   minHeight: '280px',
+   overflow: 'hidden'
+ }}>
+   {/* Top-right Arrow Circle */}
+   <div className="position-absolute top-0 end-0 m-3">
+     <div className="d-flex align-items-center justify-content-center border rounded-circle" style={{
+       width: '38px',
+       height: '38px',
+       backgroundColor: 'white',
+     }}>
+       <i className="bi bi-arrow-up-right"></i>
+     </div>
+   </div>
+ 
+   {/* Image Section */}
+   <div className="me-4">
+     <img src="/images/child.png" alt="Child" style={{ width: '100px', borderRadius: '12px' }} />
+   </div>
+ 
+   {/* Text Section */}
+   <div>
+     <div className="px-3 py-2 bg-white rounded-pill" style={{ maxWidth: '260px' }}>
+       <h6 className="mb-0" style={{ fontSize: '16px', fontWeight: 500 }}>
+         Consult The <br /> Best Nutrition <br /> For Your Child
+       </h6>
+     </div>
+   </div>
+ </div>
+ 
+         
          ))}
       </>
    )

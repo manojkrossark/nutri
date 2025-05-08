@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import NiceSelect from "@/ui/NiceSelect";
 import Link from "next/link";
+import Image from "next/image";
 type MealType = {
   mealPlan: {
     location: string;
@@ -14,7 +15,10 @@ type MealType = {
       day: string;
       meals: {
         meal: string;
-        items: string[];
+        items: {
+          name: string;
+          imageUrl: string;
+        }[];
         notes?: string;
       }[];
     }[];
@@ -147,21 +151,20 @@ const DropdownOne = ({ style }: any) => {
     e.preventDefault();
     try {
       setLoading(true);
-      // const response = await axios.post("http://localhost:8000/get-meal", {
-      const response = await axios.post(
-        "https://nutribk.onrender.com/get-meal",
-        {
-          mood,
-          location,
-          health_goals: healthGoals,
-          dietary_restrictions: dietaryRestrictions,
-          latitude,
-          longitude,
-          language,
-          budget,
-          notes,
-        }
-      );
+      const response = await axios.post("https://nutribk.onrender.com/get-meal", {
+        // const response = await axios.post(
+        //   "https://nutribk.onrender.com/get-meal",
+        //   {
+        mood,
+        location,
+        health_goals: healthGoals,
+        dietary_restrictions: dietaryRestrictions,
+        latitude,
+        longitude,
+        language,
+        budget,
+        notes,
+      });
 
       if (response.data.meal) {
         try {
@@ -409,7 +412,7 @@ const DropdownOne = ({ style }: any) => {
           margin-top: 8px;
         }
       `}</style>
-      
+
       {showPermissionOverlay && (
         <div
           style={{
@@ -626,20 +629,35 @@ const DropdownOne = ({ style }: any) => {
                 (dayObj, dayIndex) =>
                   selectedDay === dayObj.day && (
                     <div key={dayIndex} className="meal-card">
-                      {/* <div className="meal-card-header">
-                        <span className="meal-tag">DAY</span>
-                      <h5>{dayObj.day}</h5>
-                      </div> */}
-
                       <div className="meal-card-body">
                         {dayObj.meals.map((mealObj, mealIndex) => (
                           <div key={mealIndex} className="meal-block">
                             <h6 className="meal-title">{mealObj.meal}</h6>
                             <ul className="list-style-one fs-16 color-dark style-none">
                               {mealObj?.items?.map((item, i) => (
-                                <li key={i}>{item}</li>
+                                <li key={i}>
+                                  {item.name}
+                                  {item.imageUrl && (
+                                    <div style={{ marginTop: "5px" }}>
+                                      <Image
+                                        src={item.imageUrl}
+                                        alt={item.name}
+                                        width={100}
+                                        height={75}
+                                        style={{
+                                          objectFit: "cover",
+                                          borderRadius: "50%",
+                                          boxShadow: "0 4px 12px #6c757d",
+                                          width: "100px",
+                                          height: "100px",
+                                        }}
+                                      />
+                                    </div>
+                                  )}
+                                </li>
                               ))}
                             </ul>
+
                             {mealObj.notes && (
                               <p className="meal-note">
                                 <strong>Note:</strong> {mealObj.notes}

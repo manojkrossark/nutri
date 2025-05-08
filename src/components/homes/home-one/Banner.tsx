@@ -9,7 +9,7 @@ import bannerImg_2 from "@/assets/images/assets/ils_05.svg"
 
 const Banner = () => {
    return (
-      <div className="hero-banner-one bg-pink z-1 pt-225 xl-pt-150 pb-250 xl-pb-150 lg-pb-100 position-relative">
+      <div className="hero-banner-one bg-white z-1 pt-225 xl-pt-150 pb-250 xl-pb-150 lg-pb-100 position-relative">
          <div className="container position-relative">
             <div className="row">
                <div className="col-xxl-10 col-xl-9 col-lg-10 col-md-10 m-auto">                 

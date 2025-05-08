@@ -91,11 +91,11 @@ const HeroBanner = () => {
                   <div className="row">
                     <div className="col-xl-7 col-lg-12 col-md-7">
                       <p
-                        className="fs-20 color-dark m0 lg-pb-20 wow fadeInUp"
+                        className="fs-16 color-light m0 lg-pb-20 wow fadeInUp"
                         data-wow-delay="0.1s"
                       >
-                        Make sure your daily nutrition is sufficient.Consult
-                        your problem about nutrition with us
+                       Get personalized nutrition guidance with our AI-powered planner—tailored to your health goals, preferences, and dietary needs.
+                       Need help? Consult with us and take control of your nutrition, every day.
                       </p>
                     </div>
                   </div>

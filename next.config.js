@@ -9,6 +9,9 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ["images.unsplash.com", "images.pexels.com"],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(mp3|wav|ogg)$/i,

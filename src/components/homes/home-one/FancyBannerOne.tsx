@@ -3,7 +3,7 @@ import Link from "next/link";
 import SocialIcon from "@/components/common/SocialIcon";
 
 import titleShape from "@/assets/images/shape/title_shape_04.svg";
-import data from "@/assets/images/graph.png";
+import data from "@/assets/images/bg.png";
 const FancyBannerOne = ({ style }: any) => {
   return (
     <div

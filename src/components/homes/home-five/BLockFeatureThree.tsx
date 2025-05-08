@@ -6,13 +6,13 @@ import featureShape_2 from "@/assets/images/shape/shape_56.svg"
 
 const BLockFeatureThree = () => {
    return (
-      <div className="block-feature-nine bg-pink-two position-relative z-1 mt-170 xl-mt-100 pt-120 xl-pt-80 pb-150 xl-pb-80">
+      <div className="block-feature-nine bg-white -two position-relative z-1 mt-170 xl-mt-100 pt-120 xl-pt-80 pb-150 xl-pb-80">
          <div className="container container-large">
             <div className="position-relative">
                <div className="row">
                   <div className="title-one text-center mb-50 lg-mb-20 wow fadeInUp">
-                     <h3>Buy, Rend & Sell</h3>
-                     <p className="fs-22">Over 745K listings of apartments, lots, plots - available today.</p>
+                     <h3>Select Existing Plans</h3>
+                     <p className="fs-22">Over 745K Personalized Meal Plans, Recipes & Nutritional Guides—Available Today.</p>
                   </div>
                </div>
 

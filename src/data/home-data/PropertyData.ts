@@ -1,24 +1,24 @@
 import { StaticImageData } from "next/image";
 
-import propertyThumb_1 from "@/assets/images/listing/img_01.jpg";
-import propertyThumb_2 from "@/assets/images/listing/img_02.jpg";
-import propertyThumb_3 from "@/assets/images/listing/img_03.jpg";
+import propertyThumb_1 from "@/assets/images/img1.png";
+import propertyThumb_2 from "@/assets/images/img2.png";
+import propertyThumb_3 from "@/assets/images/img3.png";
 import propertyThumb_4 from "@/assets/images/listing/img_04.jpg";
 import propertyThumb_5 from "@/assets/images/listing/img_05.jpg";
 import propertyThumb_6 from "@/assets/images/listing/img_06.jpg";
 
-import property2Thumb_1 from "@/assets/images/listing/img_07.jpg";
-import property2Thumb_2 from "@/assets/images/listing/img_08.jpg";
-import property2Thumb_3 from "@/assets/images/listing/img_09.jpg";
+import property2Thumb_1 from "@/assets/images/img1.png";
+import property2Thumb_2 from "@/assets/images/img2.png";
+import property2Thumb_3 from "@/assets/images/img3.png";
 
-import property3Thumb_1 from "@/assets/images/listing/img_13.jpg";
-import property3Thumb_2 from "@/assets/images/listing/img_14.jpg";
-import property3Thumb_3 from "@/assets/images/listing/img_15.jpg";
+import property3Thumb_1 from "@/assets/images/img1.png";
+import property3Thumb_2 from "@/assets/images/img2.png";
+import property3Thumb_3 from "@/assets/images/img3.png";
 import property3Thumb_4 from "@/assets/images/listing/img_16.jpg";
 
-import propertyLargThumb_1 from "@/assets/images/listing/img_large_01.jpg";
-import propertyLargThumb_2 from "@/assets/images/listing/img_large_02.jpg";
-import propertyLargThumb_3 from "@/assets/images/listing/img_large_03.jpg";
+import propertyLargThumb_1 from "@/assets/images/img1.png";
+import propertyLargThumb_2 from "@/assets/images/img2.png";
+import propertyLargThumb_3 from "@/assets/images/img3.png";
 import propertyLargThumb_4 from "@/assets/images/listing/img_large_04.jpg";
 import propertyLargThumb_5 from "@/assets/images/listing/img_large_05.jpg";
 import propertyLargThumb_6 from "@/assets/images/listing/img_large_06.jpg";
@@ -55,7 +55,7 @@ const property_data: DataType[] = [
    {
       id: 1,
       page: "home_1",
-      tag: "FOR RENT",
+      tag: "FOR RT",
       carousel_thumb: [{ img: propertyThumb_1, active: "active" }, { img: propertyThumb_2 }, { img: propertyThumb_3 }],
       title: "Blueberry villa",
       address: "Mirpur 10, Stadium dhaka 1208",
@@ -93,7 +93,7 @@ const property_data: DataType[] = [
    {
       id: 4,
       page: "home_1",
-      tag: "FOR RENT",
+      tag: "FOR RET",
       carousel_thumb: [{ img: propertyThumb_4, active: "active" }, { img: propertyThumb_5 }, { img: propertyThumb_6 }],
       title: "Blueberry villa",
       address: "Mirpur 10, Stadium dhaka 1208",
@@ -118,7 +118,7 @@ const property_data: DataType[] = [
    {
       id: 6,
       page: "home_1",
-      tag: "FOR RENT",
+      tag: "FOR RET",
       carousel_thumb: [{ img: propertyThumb_6, active: "active" }, { img: propertyThumb_5 }, { img: propertyThumb_4 }],
       title: "Luxury villa in Dal lake.",
       address: "Mirpur 10, Stadium",
@@ -172,7 +172,7 @@ const property_data: DataType[] = [
    {
       id: 1,
       page: "home_3_property_2",
-      tag: "FOR RENT",
+      tag: "FOR RNT",
       thumb:property3Thumb_1,
       carousel_thumb: [{id:"1", img: propertyLargThumb_1}, {id:"2", img: propertyLargThumb_2 }, {id:"3", img: propertyLargThumb_3 }],
       title: "Blueberry villa.",
