@@ -4,6 +4,7 @@ import axios from "axios";
 import NiceSelect from "@/ui/NiceSelect";
 import Link from "next/link";
 import Image from "next/image";
+import { BASE_API_URL } from "@/utils/constants";
 type MealType = {
   mealPlan: {
     location: string;
@@ -151,10 +152,7 @@ const DropdownOne = ({ style }: any) => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("https://nutribk.onrender.com/get-meal", {
-        // const response = await axios.post(
-        //   "https://nutribk.onrender.com/get-meal",
-        //   {
+      const response = await axios.post(`${BASE_API_URL}/meal/get-meal`, {
         mood,
         location,
         health_goals: healthGoals,
