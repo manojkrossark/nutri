@@ -1,10 +1,10 @@
 import HomeThree from "@/components/homes/home-three";
 import Wrapper from "@/layouts/Wrapper";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 const DynamicComponentWithNoSSR = dynamic(
-  () => import('@/components/homes/home-one'),
+  () => import("@/components/homes/home-five"),
   { ssr: false }
-)
+);
 
 export const metadata = {
   title: "Alto -Your AI Nutrionist Assistant",

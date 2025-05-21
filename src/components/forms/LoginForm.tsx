@@ -10,16 +10,22 @@ import axios from "axios";
 
 import OpenEye from "@/assets/images/icon/icon_68.svg";
 import { BASE_API_URL } from "@/utils/constants";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   identifier: string; // email or phone
   password: string;
 }
 
+interface LoginFormProps {
+  closeModal: () => void;
+}
+
 // Simple phone regex
 const phoneRegex = /^(\+?\d{1,3}[- ]?)?\d{10}$/;
 
-const LoginForm = () => {
+const LoginForm = ({ closeModal }: LoginFormProps) => {
+  const router = useRouter();
   const schema = yup.object({
     identifier: yup
       .string()
@@ -55,6 +61,9 @@ const LoginForm = () => {
 
       toast.success("Login successful!", { position: "top-center" });
       reset();
+      closeModal?.();
+      // ✅ Redirect after successful login
+      router.push("/home-one");
     } catch (error: any) {
       console.error("Login error:", error);
       toast.error(

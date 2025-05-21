@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import LoginForm from "@/components/forms/LoginForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import loginIcon_1 from "@/assets/images/icon/google.png";
 import loginIcon_2 from "@/assets/images/icon/facebook.png";
 import RegisterForm from "@/components/forms/RegisterForm";
+import { Modal } from "bootstrap";
 
 const tab_title: string[] = ["Login", "Signup"];
 
@@ -14,6 +15,27 @@ const LoginModal = ({ loginModal, setLoginModal }: any) => {
 
   const handleTabClick = (index: any) => {
     setActiveTab(index);
+  };
+
+  const closeModalManually = () => {
+    const modalEl = document.getElementById("loginModal");
+
+    if (modalEl) {
+      modalEl.classList.remove("show");
+      modalEl.setAttribute("aria-hidden", "true");
+      modalEl.removeAttribute("aria-modal");
+      modalEl.style.display = "none";
+
+      // Optional: remove backdrop manually if still present
+      const backdrops = document.getElementsByClassName("modal-backdrop");
+      while (backdrops.length > 0) {
+        backdrops[0].parentNode?.removeChild(backdrops[0]);
+      }
+
+      document.body.classList.remove("modal-open");
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
   };
 
   return (
@@ -64,7 +86,11 @@ const LoginModal = ({ loginModal, setLoginModal }: any) => {
                         <Link href="#">Sign up</Link>
                       </p>
                     </div>
-                    <LoginForm />
+                    <LoginForm
+                      closeModal={() => {
+                        closeModalManually();
+                      }}
+                    />
                   </div>
 
                   <div
