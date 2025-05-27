@@ -7,7 +7,7 @@ import UseSticky from "@/hooks/UseSticky"
 import LoginModal from "@/modals/LoginModal"
 import Offcanvas from "./Menu/Offcanvas"
 
-import logo_1 from "@/assets/images/logo/logo_06.svg";
+import logo_1 from "@/assets/images/logo/CromaAlto.png";
 
 const HeaderThree = () => {
    const { sticky } = UseSticky();
@@ -21,7 +21,12 @@ const HeaderThree = () => {
                   <div className="d-flex align-items-center">
                      <div className="logo order-lg-0">
                         <Link href="/" className="d-flex align-items-center">
-                           <Image src={logo_1} alt="" />
+                          <div style={{ fontSize: "42px", fontWeight: 400, fontFamily: "'Segoe UI', sans-serif" }}>
+      <span style={{ color: "#FFF" }}>A</span>
+      <span style={{ color: "#2ac56c" }}>l</span>
+      <span style={{ color: "#2ac56c" }}>t</span>
+      <span style={{ color: "#FFF" }}>o</span>
+    </div>
                         </Link>
                      </div>
 

@@ -10,6 +10,38 @@ const HeroBanner = () => {
   return (
     <>
       <style jsx>{`
+        .hero-banner-five {
+          position: relative;
+    overflow: hidden;
+    height: 100vh;  /* Full viewport height */
+    width: 100vw;   /* Full viewport width */
+        }
+
+        .background-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 0;
+        }
+
+        .video-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+          z-index: 1;
+        }
+
+        .hero-banner-five > *:not(video):not(.video-overlay) {
+          position: relative;
+          z-index: 2;
+        }
+
         .get-started-section {
           display: flex;
           align-items: center;
@@ -71,43 +103,63 @@ const HeroBanner = () => {
           }
         }
       `}</style>
-      <div className="hero-banner-five bg-white z-2 position-relative pt-150 md-pt-150">
+
+      <div className="hero-banner-five pt-150 md-pt-150">
+        {/* Background Video */}
+        <video
+          className="background-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/assets/nutri.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay */}
+        <div className="video-overlay" />
+
+        {/* Main Content */}
         <div className="container container-large">
           <div className="position-relative">
             <div className="row">
               <div className="col-lg-7">
-              <h6 className="wow fadeInUp mb-50">
-              Your Smart Nutrition AI Assistant
-                  </h6>
+                <h6 className="wow fadeInUp mb-50 text-white">
+                  Your Smart Nutrition AI Assistant
+                </h6>
                 <div className="position-relative z-1">
-                  <h1 className="hero-heading wow fadeInUp mb-50">
+                  <h1 className="hero-heading wow fadeInUp mb-50 text-white">
                     We Take Care About Your Health
                   </h1>
-                  <Image
+            {/*       <Image
                     src={bannerShape}
                     alt=""
                     className="lazy-img shape_01 shapes d-none d-lg-block"
-                  />
+                  /> */}
                   <div className="row">
                     <div className="col-xl-7 col-lg-12 col-md-7">
                       <p
-                        className="fs-16 color-light m0 lg-pb-20 wow fadeInUp"
+                        className="fs-16 m0 lg-pb-20 wow fadeInUp text-white"
                         data-wow-delay="0.1s"
                       >
-                       Get personalized nutrition guidance with our AI-powered planner—tailored to your health goals, preferences, and dietary needs.
-                       Need help? Consult with us and take control of your nutrition, every day.
+                        Get personalized nutrition guidance with our
+                        AI-powered planner—tailored to your health goals,
+                        preferences, and dietary needs. Need help? Consult
+                        with us and take control of your nutrition, every day.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="get-started-section">
               <button className="get-started-button">Get Started</button>
 
-              <div className="image-container">
+              {/* <div className="image-container">
                 <Image src={bannerImg_1} alt="banner" className="lazy-img" />
-              </div>
+              </div> */}
 
               <button className="circle-icon-button">
                 <i className="bi bi-arrow-up-right"></i>
@@ -115,14 +167,12 @@ const HeroBanner = () => {
             </div>
           </div>
         </div>
+
         <Image
           src={bannerImg_2}
           alt=""
           className="lazy-img shapes illustration"
         />
-        <div className="media-wrapper">
-          <div className="bg"></div>
-        </div>
       </div>
     </>
   );
