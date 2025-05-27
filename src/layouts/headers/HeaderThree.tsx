@@ -26,6 +26,12 @@ const HeaderThree = () => {
       <span style={{ color: "#2ac56c" }}>l</span>
       <span style={{ color: "#2ac56c" }}>t</span>
       <span style={{ color: "#FFF" }}>o</span>
+      <span style={{ color: "#FFF" }}>.</span>
+      <span style={{ color: "#FFF" }}>n</span>
+      <span style={{ color: "#FFF" }}>u</span>
+      <span style={{ color: "#FFF" }}>t</span>
+       <span style={{ color: "#FFF" }}>r</span>
+      <span style={{ color: "#FFF" }}>i</span>
     </div>
                         </Link>
                      </div>
