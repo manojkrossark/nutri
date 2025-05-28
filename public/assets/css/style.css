@@ -2245,7 +2245,7 @@ iframe {
 .sidenavbtn {
   width: 55px;
   height: 55px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   font-size: 28px;
 }
 .sidenavbtn:hover {

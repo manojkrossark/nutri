@@ -2,9 +2,8 @@
 import Image from "next/image";
 import DropdownFive from "@/components/search-dropdown/home-dropdown/DropdownFive";
 
-import bannerShape from "@/assets/images/shape/shape_54.svg";
-import bannerImg_1 from "@/assets/images/assets/screen_06.png";
 import bannerImg_2 from "@/assets/images/assets/ils_05.svg";
+import bottomImg from "@/assets/images/image 1.png"; // Replace with your actual image
 
 const HeroBanner = () => {
   return (
@@ -12,9 +11,15 @@ const HeroBanner = () => {
       <style jsx>{`
         .hero-banner-five {
           position: relative;
-    overflow: hidden;
-    height: 100vh;  /* Full viewport height */
-    width: 100vw;   /* Full viewport width */
+          overflow: hidden;
+          height: 100vh;
+          width: 100vw;
+        }
+
+        .small-heading {
+          font-size: 38px;
+          font-weight: 400;
+          margin-bottom: 10px;
         }
 
         .background-video {
@@ -33,7 +38,7 @@ const HeroBanner = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+          background: rgba(0, 0, 0, 0.3);
           z-index: 1;
         }
 
@@ -42,11 +47,22 @@ const HeroBanner = () => {
           z-index: 2;
         }
 
+        .content-wrapper {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 100vh;
+          z-index: 2;
+          padding-bottom: 50px;
+        }
+
         .get-started-section {
           display: flex;
           align-items: center;
           gap: 1rem;
           flex-wrap: wrap;
+          margin-top: 30px;
         }
 
         .get-started-button {
@@ -81,10 +97,16 @@ const HeroBanner = () => {
           color: #444;
         }
 
-        .image-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .bottom-image {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          max-height: 150px;
+          object-fit: contain;
+          z-index: 2;
+          pointer-events: none;
         }
 
         @media (max-width: 600px) {
@@ -101,18 +123,16 @@ const HeroBanner = () => {
           .circle-icon-button {
             align-self: flex-end;
           }
+
+          .content-wrapper {
+            padding-bottom: 30px;
+          }
         }
       `}</style>
 
-      <div className="hero-banner-five pt-150 md-pt-150">
+      <div className="hero-banner-five">
         {/* Background Video */}
-        <video
-          className="background-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
+        <video className="background-video" autoPlay muted loop playsInline>
           <source src="/assets/nutri.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -121,58 +141,55 @@ const HeroBanner = () => {
         <div className="video-overlay" />
 
         {/* Main Content */}
-        <div className="container container-large">
-          <div className="position-relative">
-            <div className="row">
-              <div className="col-lg-7">
-                <h6 className="wow fadeInUp mb-50 text-white">
-                  Your Smart Nutrition AI Assistant
-                </h6>
-                <div className="position-relative z-1">
-                  <h1 className="hero-heading wow fadeInUp mb-50 text-white">
-                    We Take Care About Your Health
-                  </h1>
-            {/*       <Image
-                    src={bannerShape}
-                    alt=""
-                    className="lazy-img shape_01 shapes d-none d-lg-block"
-                  /> */}
-                  <div className="row">
-                    <div className="col-xl-7 col-lg-12 col-md-7">
-                      <p
-                        className="fs-16 m0 lg-pb-20 wow fadeInUp text-white"
-                        data-wow-delay="0.1s"
-                      >
-                        Get personalized nutrition guidance with our
-                        AI-powered planner—tailored to your health goals,
-                        preferences, and dietary needs. Need help? Consult
-                        with us and take control of your nutrition, every day.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        <div className="container container-large content-wrapper">
+          <div className="row">
+            <div className="col-lg-7">
+              <p className="wow fadeInUp mb-30 text-white small-heading">
+                Your Smart Nutrition Partner — Powered by AI, Guided by Human Care
+              </p>
+              <p className="fs-16 m0 lg-pb-20 wow fadeInUp text-white">
+                Get personalized nutrition guidance with our AI-powered
+                planner—tailored <br /> to your health goals, preferences, and dietary
+                needs. Need help? <br /> Consult with us and take control of your
+                nutrition, every day.
+              </p>
+
+              <div className="get-started-section">
+                <button className="get-started-button">Get Started</button>
+                <button className="circle-icon-button">
+                  <i className="bi bi-arrow-up-right"></i>
+                </button>
               </div>
-            </div>
-
-            <div className="get-started-section">
-              <button className="get-started-button">Get Started</button>
-
-              {/* <div className="image-container">
-                <Image src={bannerImg_1} alt="banner" className="lazy-img" />
-              </div> */}
-
-              <button className="circle-icon-button">
-                <i className="bi bi-arrow-up-right"></i>
-              </button>
+         
             </div>
           </div>
         </div>
-
+    
+        {/* Floating Shapes */}
         <Image
           src={bannerImg_2}
-          alt=""
+          alt="illustration"
           className="lazy-img shapes illustration"
         />
+       <Image
+          src={bottomImg}
+          alt="bottom illustration"
+          style={{
+  position: 'absolute',
+  bottom: 0,
+  left: '70%',
+  transform: 'translateX(-50%)',
+  width: 'auto',
+  height: 'auto',
+  backgroundColor: 'white',
+  zIndex: 2,
+  top:'36%',
+  borderRadius :'8px'
+
+}} 
+        />
+        {/* Bottom Image */}
+  
       </div>
     </>
   );

@@ -1,36 +1,51 @@
-import feature_data from "@/data/home-data/FeatureData"
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
+import videoThumbnail from "@/assets/images/img2.jpg"
+import saladImage from "@/assets/images/img1.jpg"
+import playIcon from "@/assets/images/icon/icon_10.svg"
+import quoteImage from "@/assets/images/icon/icon_05.svg"
 
-import titleShape from "@/assets/images/shape/title_shape_03.svg"
+const BLockFeatureTwo = () => {
+  return (
+    <div className="block-feature-one mt-130 xl-mt-100 lg-mt-80 mb-150 xl-mb-100 lg-mb-80">
+      <div className="container">
+        <div className="title-one text-center mb-50 xl-mb-30 lg-mb-20 wow fadeInUp">
+          <h3>
+            Recipes and wellness reminders <span>to promote a healthy way of life</span>
+          </h3>
+        </div>
 
-const BLockFeatureTwo = ({ style }: any) => {
-   return (
-      <div className={`block-feature-twelve ${style ? "mt-150 xl-mt-100" : "mt-170 xl-mt-120"}`}>
-         <div className="container container-large">
-            <div className="position-relative">
-               <div className="title-one text-center text-lg-start mb-60 xl-mb-40 lg-mb-20 wow fadeInUp">
-                  {style ? <h3><span>Popular<Image src={titleShape} alt="" className="lazy-img" /></span> Cities</h3> : <h3>Popular Cities</h3>}
-               </div>
-
-               <div className="wrapper flex-wrap d-flex justify-content-center justify-content-md-between align-items-center">
-                  {feature_data.filter((items) => items.page === "home_5_feature_1").map((item) => (
-                     <div key={item.id} className="location-card-three text-center wow fadeInUp" data-wow-delay={item.data_delay_time}>
-                        <div className={`image-bg position-relative z-1 rounded-circle overflow-hidden mb-30 ${item.item_bg}`}>
-                           <Link href="/listing_04" className="stretched-link"></Link>
-                        </div>
-                        <Link href="/listing_04" className="title"><h5>{item.title}</h5></Link>
-                        <p>{item.desc}</p>
-                     </div>
-                  ))}
-               </div>
-               <div className="section-btn text-center md-mt-50">
-                  <Link href="/listing_04" className="btn-eight"><span>Explore All</span> <i className="bi bi-arrow-up-right"></i></Link>
-               </div>
+        <div className="row gx-xl-5 align-items-center">
+          {/* Left Side - SHEcare Recipes */}
+          <div className="col-md-6">
+            <div className="card-style-one wow fadeInUp">
+              <Image src={saladImage} alt="SHEcare Salad" className="lazy-img w-100 rounded" />
+              <div className="mt-30">
+                <h5 className="text-uppercase fw-600 text-success">SHEcare Recipes</h5>
+                <p className="fs-18 mt-10 mb-15">
+                  For women in any life stage seeking more energy and lightness
+                </p>
+                <Link href="/shecare-recipes" className="text-decoration-underline fs-16 fw-500 text-primary">
+                  READ MORE →
+                </Link>
+              </div>
             </div>
-         </div>
+          </div>
+
+          {/* Right Side - Video Section */}
+          <div className="col-md-6">
+            <div className="video-wrapper position-relative wow fadeInUp">
+              <Image src={videoThumbnail} alt="Healthy Cooking Video" className="lazy-img w-100 rounded" />
+              <Link href="/healthy-video" className="video-btn position-absolute top-50 start-50 translate-middle">
+                <Image src={playIcon} alt="Play Video" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
-   )
+    </div>
+  )
 }
 
 export default BLockFeatureTwo

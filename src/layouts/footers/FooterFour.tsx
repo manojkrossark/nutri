@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import footerLogo from "@/assets/images/logo/logo_06.svg"
+import footerLogo from "@/assets/images/logo/CromaAlto.png"
 import footerShape from "@/assets/images/assets/ils_06.svg"
 import Link from "next/link"
 import footer_data from "@/data/home-data/FooterData"

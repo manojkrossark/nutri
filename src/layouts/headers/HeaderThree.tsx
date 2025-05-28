@@ -38,13 +38,13 @@ const HeaderThree = () => {
 
                      <div className="right-widget ms-auto me-3 me-lg-0 order-lg-4">
                         <ul className="d-flex align-items-center style-none">
-                           <li className="d-flex align-items-center login-btn-one">
-                              <i className="fa-regular fa-lock"></i><Link href="#" data-bs-toggle="modal" data-bs-target="#loginModal" className="fw-500 tran3s">Login <span className="d-none d-sm-inline-block">/ Sign up</span></Link>
+                           <li className="d-flex align-items-center login-btn-one text-white">
+                              <i className="fa-regular fa-lock"></i><Link href="#" data-bs-toggle="modal" data-bs-target="#loginModal" className="fw-500 tran3s  text-white">Login <span className="d-none d-sm-inline-block  text-white">/ Sign up</span></Link>
                            </li>
-                           <li className="d-none d-md-inline-block ms-3 ms-xl-4 me-xl-4">
+                           <li className="d-none d-md-inline-block ms-3 ms-xl-4 me-xl-4  text-white">
                              {/*  <Link href="/dashboard/add-property" className="btn-five md rounded-0" target="_blank"><span>Add Listing</span> <i className="fa-thin fa-arrow-up-right"></i></Link> */}
                            </li>
-                           <li className="d-none d-xl-block"><button onClick={() => setOffCanvas(true)} style={{ cursor: "pointer" }} className="sidenavbtn rounded-circle tran3s" type="button"><i className="fa-sharp fa-light fa-bars-filter"></i></button></li>
+                           <li className="d-none d-xl-block  text-white"><button onClick={() => setOffCanvas(true)} style={{ cursor: "pointer" }} className="sidenavbtn rounded-circle tran3s  text-white" type="button"><i className="fa-sharp fa-light fa-bars-filter "></i></button></li>
                         </ul>
                      </div>
 

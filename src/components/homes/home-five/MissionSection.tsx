@@ -1,7 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBalanceScale,
+  faLeaf,
+  faUserDoctor,
+  faAppleAlt,
+  faSpa,
+  faVenus,
+} from "@fortawesome/free-solid-svg-icons";
 export default function MissionSection() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -13,40 +21,20 @@ export default function MissionSection() {
   }, []);
 
   const tags = [
-    { label: "Balance", icon: "⚖️", rotation: "-10deg", top: 10, left: 30 },
-    {
-      label: "Natural Skin Care",
-      icon: "🌿",
-      rotation: "5deg",
-      top: 60,
-      left: 10,
-    },
-    {
-      label: "Nutritionist support",
-      icon: "🥑",
-      rotation: "-4deg",
-      top: 110,
-      left: 40,
-    },
-    {
-      label: "Nutrition and Lifestyle",
-      icon: "🍎",
-      rotation: "8deg",
-      top: 170,
-      left: 20,
-    },
-    { label: "Meditation", icon: "🧘", rotation: "-6deg", top: 230, left: 5 },
-    { label: "Help women", icon: "♀️", rotation: "4deg", top: 290, left: 25 },
-  ];
-
+  { label: "Balance", icon: faBalanceScale, rotation: "-10deg", top: 10, left: 30 },
+  { label: "Natural Skin Care", icon: faLeaf, rotation: "5deg", top: 60, left: 10 },
+  { label: "Nutritionist support", icon: faUserDoctor, rotation: "-4deg", top: 110, left: 40 },
+  { label: "Nutrition and Lifestyle", icon: faAppleAlt, rotation: "8deg", top: 170, left: 20 },
+  { label: "Meditation", icon: faSpa, rotation: "-6deg", top: 230, left: 5 },
+  { label: "Help women", icon: faVenus, rotation: "4deg", top: 290, left: 25 },
+];
+  
   return (
     <section style={styles.section}>
       <div style={styles.missionBlock}>
         <h1 style={styles.title}>
-          Our mission it to
-          <br />
-          Advance the quality of
-          <br />
+          Our mission it to <br/>
+          Advance the quality of<br/>
           nutrition for everyone
         </h1>
       </div>
@@ -68,20 +56,16 @@ export default function MissionSection() {
               Make an appointment with me for a trial consultation and I will
               identify the issues and put together the best plan for you.
             </p>
-            <form style={styles.form}>
-              <input type="text" placeholder="Your name" style={styles.input} />
-              <input
-                type="email"
-                placeholder="Email address"
-                style={styles.input}
-              />
-              <button type="submit" style={styles.button}>
-                TRY FREE
-              </button>
-              <label style={styles.privacy}>
-                <input type="checkbox" /> Accept Privacy Policy
-              </label>
-            </form>
+         <form style={styles.form}>
+  <div style={styles.inputRow}>
+    <input type="text" placeholder="Your name" style={styles.input} />
+    <input type="email" placeholder="Email address" style={styles.input} />
+    <button type="submit" style={styles.button}>TRY FREE</button>
+  </div>
+  <label style={styles.privacy}>
+    <input type="checkbox" /> Accept Privacy Policy
+  </label>
+</form>
           </div>
 
           {/* Right Floating Labels */}
@@ -105,7 +89,7 @@ export default function MissionSection() {
                   left: isMobile ? "auto" : `${tag.left}%`,
                 }}
               >
-                <span style={{ marginRight: "8px" }}>{tag.icon}</span>
+                 <FontAwesomeIcon icon={tag.icon} style={{ marginRight: "8px" }} />
                 {tag.label}
               </div>
             ))}
@@ -118,7 +102,6 @@ export default function MissionSection() {
 
 const styles: { [key: string]: React.CSSProperties } = {
   section: {
-    fontFamily: "sans-serif",
     padding: "4rem 1rem",
     backgroundColor: "#fdfdfd",
   },
@@ -127,8 +110,8 @@ const styles: { [key: string]: React.CSSProperties } = {
     marginBottom: "2.5rem",
   },
   title: {
-    fontSize: "2.2rem",
-    fontWeight: 600,
+    fontSize: "4.2rem",
+    fontWeight: 400,
     lineHeight: "1.5",
   },
   card: {
@@ -153,8 +136,9 @@ const styles: { [key: string]: React.CSSProperties } = {
     zIndex: 2,
   },
   subTitle: {
-    fontSize: "1.7rem",
-    fontWeight: 600,
+    fontSize: "3rem",
+    color:"#fff",
+    fontWeight: 400,
   },
   description: {
     margin: "1.2rem 0",
@@ -205,14 +189,15 @@ const styles: { [key: string]: React.CSSProperties } = {
     border: "1px solid #fff",
     borderRadius: "30px",
     padding: "0.5rem 1rem",
-    fontSize: "0.85rem",
+    fontSize: "1.25rem",
     backgroundColor: "transparent",
     color: "#fff",
-    fontWeight: 500,
+    fontWeight: 400,
     whiteSpace: "nowrap",
     boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
     display: "inline-flex",
     alignItems: "center",
     margin: "0.3rem",
   },
+  
 };
