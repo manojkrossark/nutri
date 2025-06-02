@@ -15,26 +15,26 @@ import FancyBanner from "@/components/common/FancyBanner";
 import PropertyOne from "../home-four/PropertyOne";
 import MissionSection from "./MissionSection";
 const HomeFive = () => {
-   return (
-      <>
-         <HeaderThree />
-         <HeroBanner />
-         <Category />
-           <MissionSection />
-     {/*     <BLockFeatureOne />
+  return (
+    <>
+      <HeaderThree />
+      <HeroBanner />
+      <Category />
+      <MissionSection />
+      {/*     <BLockFeatureOne />
         <Brand /> */}
-        {/*  <PropertyOne style_1={true} style_2={false} /> */}
-         <BLockFeatureTwo style={false} />
-   {/*       <BLockFeatureThree /> */}
- {/*         <BLockFeatureFour /> */}
-{/*          <FancyBannerOne style={true} />
+      {/*  <PropertyOne style_1={true} style_2={false} /> */}
+      <BLockFeatureTwo />
+      {/*       <BLockFeatureThree /> */}
+      {/*         <BLockFeatureFour /> */}
+      {/*          <FancyBannerOne style={true} />
          <AgentArea style={true} /> */}
-     {/*     <Feedback style={false} />
+      {/*     <Feedback style={false} />
          <AddressBanner style={true} /> */}
-       {/*   <FancyBanner style={true} /> */}
-         <FooterFour />
-      </>
-   )
-}
+      {/*   <FancyBanner style={true} /> */}
+      <FooterFour />
+    </>
+  );
+};
 
 export default HomeFive;

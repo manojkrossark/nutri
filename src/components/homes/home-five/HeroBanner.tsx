@@ -145,13 +145,14 @@ const HeroBanner = () => {
           <div className="row">
             <div className="col-lg-7">
               <p className="wow fadeInUp mb-30 text-white small-heading">
-                Your Smart Nutrition Partner — Powered by AI, Guided by Human Care
+                Your Smart Nutrition Partner — Powered by AI, Guided by Human
+                Care
               </p>
               <p className="fs-16 m0 lg-pb-20 wow fadeInUp text-white">
                 Get personalized nutrition guidance with our AI-powered
-                planner—tailored <br /> to your health goals, preferences, and dietary
-                needs. Need help? <br /> Consult with us and take control of your
-                nutrition, every day.
+                planner—tailored <br /> to your health goals, preferences, and
+                dietary needs. Need help? <br /> Consult with us and take
+                control of your nutrition, every day.
               </p>
 
               <div className="get-started-section">
@@ -160,36 +161,33 @@ const HeroBanner = () => {
                   <i className="bi bi-arrow-up-right"></i>
                 </button>
               </div>
-         
             </div>
           </div>
         </div>
-    
+
         {/* Floating Shapes */}
         <Image
           src={bannerImg_2}
           alt="illustration"
           className="lazy-img shapes illustration"
         />
-       <Image
+        <Image
           src={bottomImg}
           alt="bottom illustration"
           style={{
-  position: 'absolute',
-  bottom: 0,
-  left: '70%',
-  transform: 'translateX(-50%)',
-  width: 'auto',
-  height: 'auto',
-  backgroundColor: 'white',
-  zIndex: 2,
-  top:'36%',
-  borderRadius :'8px'
-
-}} 
+            position: "absolute",
+            bottom: 0,
+            left: "70%",
+            transform: "translateX(-50%)",
+            width: "auto",
+            height: "auto",
+            backgroundColor: "white",
+            zIndex: 2,
+            top: "36%",
+            borderRadius: "8px",
+          }}
         />
         {/* Bottom Image */}
-  
       </div>
     </>
   );
