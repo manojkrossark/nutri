@@ -8,38 +8,38 @@ interface Item {
 
 const items: Item[] = [
   {
-    title: "Meet Your Wellness Team",
+    title: "Meet Your Nutrition Support Team",
     description: [
-      "Expert physicians specialized in holistic and preventive care",
-      "Certified lifestyle coaches with deep expertise in nutrition and behavior change",
+      "AI-powered guidance combined with certified nutrition experts and lifestyle coaches",
+      "Get personalized advice to build sustainable healthy habits",
     ],
   },
   {
-    title: "Get a Deep Health Assessment",
+    title: "Get Smart AI Recommendations",
     description: [
-      "Comprehensive review of your lifestyle, habits, and medical history",
-      "Advanced diagnostics to uncover hidden imbalances and health risks",
+      "Our AI analyzes your inputs to offer personalized nutrition advice instantly",
+      "No need for manual tracking—just answer a few questions and get tailored guidance",
     ],
   },
   {
-    title: "Define Your Personalized Path",
+    title: "Create Your Tailored Nutrition Plan",
     description: [
-      "Tailored recommendations based on your health priorities and test results",
-      "Step-by-step roadmap to achieve lasting lifestyle transformation",
+      "Personalized daily meal plans based on your preferences and dietary needs",
+      "Plans adjust dynamically as you track progress and update goals",
     ],
   },
   {
-    title: "Craft Your Daily Wellness Plan",
+    title: "Get Daily Meal & Wellness Recommendations",
     description: [
-      "Custom meal plans, movement routines, and mindfulness practices",
-      "All plans aligned with your biology, preferences, and goals",
+      "Enjoy easy recipes, hydration reminders, and wellness tips every day",
+      "Stay balanced with nutrition and lifestyle advice designed for you",
     ],
   },
   {
-    title: "Stay on Track with Expert Support",
+    title: "Stay Motivated with Ongoing Expert Support",
     description: [
-      "Ongoing guidance and accountability from your health team",
-      "Regular reviews to adapt your plan and celebrate progress",
+      "Monitor your progress with easy-to-use tracking tools",
+      "Access expert check-ins and join community challenges for extra motivation",
     ],
   },
 ];
@@ -55,7 +55,7 @@ export default function ProcessSection() {
     <section className="section">
       <div className="process-header">
         <h2 className="heading">
-          What Will <strong>You Get?</strong>
+          Your Nutrition <strong>Journey Includes ?</strong>
         </h2>
       </div>
       <div className="accordion">
