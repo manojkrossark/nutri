@@ -1924,7 +1924,7 @@ iframe {
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  color: #fff;
+  color: black;
   padding: 0 22px;
   min-width: 160px;
   text-align: center;
@@ -1941,7 +1941,7 @@ iframe {
 .btn-two:hover,
 .btn-two:focus {
   background: #ff3f25;
-  color: #fff;
+  color: black;
 }
 .btn-two.text-uppercase {
   font-size: 16px;
@@ -4427,7 +4427,7 @@ iframe {
 }
 
 .search-wrapper-one.bg {
- /* background: url(../images/shape/shape_02.svg) no-repeat center;*/
+  /* background: url(../images/shape/shape_02.svg) no-repeat center;*/
   background-size: cover;
   padding: 25px;
 }
@@ -9727,7 +9727,7 @@ iframe {
   padding: 13px 5px;
 }
 .user-data-form .nav .nav-item .nav-link.active {
-  color: #ff6725;
+  color: #000;
   background: #fff;
 }
 .user-data-form .nav .nav-item:first-child .nav-link {
