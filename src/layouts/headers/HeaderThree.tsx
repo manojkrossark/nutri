@@ -32,40 +32,79 @@ const HeaderThree = () => {
                       fontFamily: "'Segoe UI', sans-serif",
                     }}
                   >
-                    <span style={{ color: "#FFF" }}>A</span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      A
+                    </span>
                     <span style={{ color: "#2ac56c" }}>l</span>
                     <span style={{ color: "#2ac56c" }}>t</span>
-                    <span style={{ color: "#FFF" }}>o</span>
-                    <span style={{ color: "#FFF" }}>.</span>
-                    <span style={{ color: "#FFF" }}>n</span>
-                    <span style={{ color: "#FFF" }}>u</span>
-                    <span style={{ color: "#FFF" }}>t</span>
-                    <span style={{ color: "#FFF" }}>r</span>
-                    <span style={{ color: "#FFF" }}>i</span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      o
+                    </span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      .
+                    </span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      n
+                    </span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      u
+                    </span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      t
+                    </span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      r
+                    </span>
+                    <span
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
+                    >
+                      i
+                    </span>
                   </div>
                 </Link>
               </div>
 
               <div className="right-widget ms-auto me-3 me-lg-0 order-lg-4">
                 <ul className="d-flex align-items-center style-none">
-                  <li className="d-flex align-items-center login-btn-one text-white">
+                  <li
+                    className="d-flex align-items-center login-btn-one"
+                    style={sticky ? { color: "#000" } : { color: "#fff" }}
+                  >
                     <i className="fa-regular fa-lock"></i>
                     <Link
                       href="#"
                       data-bs-toggle="modal"
                       data-bs-target="#loginModal"
-                      className="fw-500 tran3s  text-white"
+                      className="fw-500 tran3s"
+                      style={sticky ? { color: "#000" } : { color: "#fff" }}
                     >
                       Login{" "}
-                      <span className="d-none d-sm-inline-block  text-white">
+                      <span
+                        className="d-none d-sm-inline-block"
+                        style={sticky ? { color: "#000" } : { color: "#fff" }}
+                      >
                         / Sign up
                       </span>
                     </Link>
                   </li>
-                  <li className="d-none d-md-inline-block ms-3 ms-xl-4 me-xl-4  text-white">
-                    {/*  <Link href="/dashboard/add-property" className="btn-five md rounded-0" target="_blank"><span>Add Listing</span> <i className="fa-thin fa-arrow-up-right"></i></Link> */}
-                  </li>
-                  <li className="d-none d-xl-block  text-white">
+                  {/* <li className="d-none d-md-inline-block ms-3 ms-xl-4 me-xl-4  text-white"> */}
+                  {/*  <Link href="/dashboard/add-property" className="btn-five md rounded-0" target="_blank"><span>Add Listing</span> <i className="fa-thin fa-arrow-up-right"></i></Link> */}
+                  {/* </li> */}
+                  {/* <li className="d-none d-xl-block  text-white">
                     <button
                       onClick={() => setOffCanvas(true)}
                       style={{ cursor: "pointer" }}
@@ -74,7 +113,7 @@ const HeaderThree = () => {
                     >
                       <i className="fa-sharp fa-light fa-bars-filter "></i>
                     </button>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
@@ -82,7 +121,7 @@ const HeaderThree = () => {
                         <p className="m0 email-text ps-5 pe-5">Our Email <Link href="#" className="tran3s fw-500 ms-2">askhomy@demo.com</Link></p>
                      </div> */}
 
-              <nav className="navbar navbar-expand-lg p0 ms-lg-5 order-lg-3">
+              {/* <nav className="navbar navbar-expand-lg p0 ms-lg-5 order-lg-3">
                 <button
                   className="navbar-toggler d-block d-lg-none"
                   type="button"
@@ -97,7 +136,7 @@ const HeaderThree = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                   <NavMenu />
                 </div>
-              </nav>
+              </nav> */}
             </div>
           </div>
         </div>
