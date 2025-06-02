@@ -14,6 +14,8 @@ import HeaderThree from "@/layouts/headers/HeaderThree";
 import FancyBanner from "@/components/common/FancyBanner";
 import PropertyOne from "../home-four/PropertyOne";
 import MissionSection from "./MissionSection";
+import ProcessSection from "./ProcessSection";
+import WaitlistForm from "@/components/forms/WaitListForm";
 const HomeFive = () => {
   return (
     <>
@@ -25,6 +27,8 @@ const HomeFive = () => {
         <Brand /> */}
       {/*  <PropertyOne style_1={true} style_2={false} /> */}
       <BLockFeatureTwo />
+      <ProcessSection />
+      <WaitlistForm />
       {/*       <BLockFeatureThree /> */}
       {/*         <BLockFeatureFour /> */}
       {/*          <FancyBannerOne style={true} />
