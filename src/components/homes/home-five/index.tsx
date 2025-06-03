@@ -4,7 +4,7 @@ import AgentArea from "../home-one/AgentArea";
 import Category from "../home-three/Category";
 import FancyBannerOne from "../home-one/FancyBannerOne";
 import BLockFeatureFour from "./BLockFeatureFour";
-import BLockFeatureOne from "./BLockFeatureOne";
+import BLockFeatureOne from "../home-one/BLockFeatureOne";
 import BLockFeatureThree from "./BLockFeatureThree";
 import BLockFeatureTwo from "./BLockFeatureTwo";
 import Brand from "./Brand";
@@ -23,10 +23,13 @@ const HomeFive = () => {
       <HeroBanner />
       <Category />
       <MissionSection />
+
       {/*     <BLockFeatureOne />
+      
         <Brand /> */}
       {/*  <PropertyOne style_1={true} style_2={false} /> */}
       <BLockFeatureTwo />
+             <BLockFeatureOne />
       <ProcessSection />
       <WaitlistForm />
       {/*       <BLockFeatureThree /> */}

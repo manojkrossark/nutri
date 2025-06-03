@@ -63,8 +63,7 @@ export default function MissionSection() {
     <section style={styles.section}>
       <div style={styles.missionBlock}>
         <h1 style={styles.title}>
-          Our mission it to <br />
-          Advance the quality of
+          Our mission is to advance the quality of
           <br />
           nutrition for everyone
         </h1>
@@ -87,16 +86,7 @@ export default function MissionSection() {
               Make an appointment with me for a trial consultation and I will
               identify the issues and put together the best plan for you.
             </p>
-            {/* <form style={styles.form}>
-  <div style={styles.inputRow}>
-    <input type="text" placeholder="Your name" style={styles.input} />
-    <input type="email" placeholder="Email address" style={styles.input} />
-    <button type="submit" style={styles.button}>TRY FREE</button>
-  </div>
-  <label style={styles.privacy}>
-    <input type="checkbox" /> Accept Privacy Policy
-  </label>
-</form> */}
+ 
           </div>
 
           {/* Right Floating Labels */}
@@ -153,7 +143,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     borderRadius: "20px",
     padding: "3rem 2rem",
     color: "#fff",
-    maxWidth: "1200px",
+    maxWidth: "auto",
     margin: "0 auto",
     position: "relative",
   },

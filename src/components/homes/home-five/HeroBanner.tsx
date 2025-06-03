@@ -171,7 +171,7 @@ const HeroBanner = () => {
           alt="illustration"
           className="lazy-img shapes illustration"
         />
-        <Image
+       {/*  <Image
           src={bottomImg}
           alt="bottom illustration"
           style={{
@@ -186,7 +186,7 @@ const HeroBanner = () => {
             top: "36%",
             borderRadius: "8px",
           }}
-        />
+        /> */}
         {/* Bottom Image */}
       </div>
     </>

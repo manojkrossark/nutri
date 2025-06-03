@@ -3,7 +3,8 @@ import Link from "next/link";
 import videoThumbnail from "@/assets/images/img2.jpg";
 import saladImage from "@/assets/images/img1.jpg";
 import playIcon from "@/assets/images/icon/icon_10.svg";
-import quoteImage from "@/assets/images/icon/icon_05.svg";
+import quoteImage from "@/assets/images/meals.png";
+import bg from "@/assets/images/Frame 85.png";
 
 const BLockFeatureTwo = () => {
   return (
@@ -21,7 +22,7 @@ const BLockFeatureTwo = () => {
           <div className="col-md-6">
             <div className="card-style-one wow fadeInUp">
               <Image
-                src={saladImage}
+                src={bg}
                 alt="SHEcare Salad"
                 className="lazy-img w-100 rounded"
               />
@@ -41,7 +42,7 @@ const BLockFeatureTwo = () => {
           <div className="col-md-6">
             <div className="video-wrapper position-relative wow fadeInUp">
               <Image
-                src={videoThumbnail}
+                src={quoteImage}
                 alt="Healthy Cooking Video"
                 className="lazy-img w-100 rounded"
               />
