@@ -31,202 +31,205 @@ import featureImg_1 from "@/assets/images/media/img_19.jpg";
 import featureImg_2 from "@/assets/images/media/img_20.jpg";
 import featureImg_3 from "@/assets/images/media/img_21.jpg";
 
+import meal_plan from "@/assets/images/meal_plan.png";
+import personalised from "@/assets/images/personalised.png";
+import real_time from "@/assets/images/real_time.png";
 interface DataType {
-   id: number;
-   page: string;
-   item_bg?: string;
-   img?: StaticImageData;
-   icon?: StaticImageData;
-   title: string;
-   desc?: string;
-   tag?: string;
-   data_delay_time?: string;
-   btn?: string;
-   class_name?:string;
+  id: number;
+  page: string;
+  item_bg?: string;
+  img?: StaticImageData;
+  icon?: StaticImageData;
+  title: string;
+  desc?: string;
+  tag?: string;
+  data_delay_time?: string;
+  btn?: string;
+  class_name?: string;
 }
 
 const feature_data: DataType[] = [
-   {
-      id: 1,
-      page: "home_nutripath_feature_1",
-      icon: feature3Icon_1,
-      title: "AI-Powered Meal Plans",
-      desc: "Smart suggestions tailored to your health goals, mood, and environment using generative AI.",
-    },
-    {
-      id: 2,
-      page: "home_nutripath_feature_1",
-      icon: feature3Icon_2,
-      title: "Personalized Nutrition",
-      desc: "We understand your unique needs—from blood sugar levels to daily activity and energy.",
-    },
-    {
-      id: 3,
-      page: "home_nutripath_feature_1",
-      icon: feature3Icon_3,
-      title: "Real-Time Wellness Insights",
-      desc: "Adapt recommendations dynamically based on weather, location, and physical state.",
-    },
-   // home_1_feature_2
+  {
+    id: 1,
+    page: "home_nutripath_feature_1",
+    icon: meal_plan,
+    title: "AI-Powered Meal Plans",
+    desc: "Smart suggestions tailored to your health goals, mood, and environment using generative AI.",
+  },
+  {
+    id: 2,
+    page: "home_nutripath_feature_1",
+    icon: personalised,
+    title: "Personalized Nutrition",
+    desc: "We understand your unique needs—from blood sugar levels to daily activity and energy.",
+  },
+  {
+    id: 3,
+    page: "home_nutripath_feature_1",
+    icon: real_time,
+    title: "Real-Time Wellness Insights",
+    desc: "Adapt recommendations dynamically based on weather, location, and physical state.",
+  },
+  // home_1_feature_2
 
-   {
-      id: 1,
-      page: "home_1_feature_2",
-      item_bg: "card-1",
-      title: "AI-Powered Meal Plans",
-      desc: "Smart suggestions tailored to your health goals, mood, and environment using generative AI."
-   },
-   {
-      id: 2,
-      page: "home_1_feature_2",
-      item_bg: "card-2",
-      title: "Personalized Nutrition",
-      desc: "We understand your unique needs—from blood sugar levels to daily activity and energy."
-   },
-   {
-      id: 3,
-      page: "home_1_feature_2",
-      item_bg: "card-3",
-      title: "New York",
-      desc: "1710 Properties",
-   },
-   {
-      id: 4,
-      page: "home_1_feature_2",
-      item_bg: "card-5",
-      title: "Miami",
-      desc: "670 Properties",
-   },
-   {
-      id: 5,
-      page: "home_1_feature_2",
-      item_bg: "card-5",
-      title: "Dhaka",
-      desc: "1670 Properties",
-   },
+  {
+    id: 1,
+    page: "home_1_feature_2",
+    item_bg: "card-1",
+    title: "AI-Powered Meal Plans",
+    desc: "Smart suggestions tailored to your health goals, mood, and environment using generative AI.",
+  },
+  {
+    id: 2,
+    page: "home_1_feature_2",
+    item_bg: "card-2",
+    title: "Personalized Nutrition",
+    desc: "We understand your unique needs—from blood sugar levels to daily activity and energy.",
+  },
+  {
+    id: 3,
+    page: "home_1_feature_2",
+    item_bg: "card-3",
+    title: "New York",
+    desc: "1710 Properties",
+  },
+  {
+    id: 4,
+    page: "home_1_feature_2",
+    item_bg: "card-5",
+    title: "Miami",
+    desc: "670 Properties",
+  },
+  {
+    id: 5,
+    page: "home_1_feature_2",
+    item_bg: "card-5",
+    title: "Dhaka",
+    desc: "1670 Properties",
+  },
 
-   // home_1_feature_3
+  // home_1_feature_3
 
-   {
-      id: 1,
-      page: "home_1_feature_3",
-      icon: feature3Icon_1,
-      title: "Create Account",
-      desc: "It’s very easy to open an account and start your journey.",
-   },
-   {
-      id: 2,
-      page: "home_1_feature_3",
-      class_name:"arrow position-relative",
-      icon: feature3Icon_2,
-      title: "Find Home",
-      desc: "Complete your profile with all the info to get attention of client.",
-   },
-   {
-      id: 3,
-      page: "home_1_feature_3",
-      icon: feature3Icon_3,
-      title: "Quick Process",
-      desc: "Apply & get your preferable jobs with all the requirements and get it.",
-   },
+  {
+    id: 1,
+    page: "home_1_feature_3",
+    icon: feature3Icon_1,
+    title: "Create Account",
+    desc: "It’s very easy to open an account and start your journey.",
+  },
+  {
+    id: 2,
+    page: "home_1_feature_3",
+    class_name: "arrow position-relative",
+    icon: feature3Icon_2,
+    title: "Find Home",
+    desc: "Complete your profile with all the info to get attention of client.",
+  },
+  {
+    id: 3,
+    page: "home_1_feature_3",
+    icon: feature3Icon_3,
+    title: "Quick Process",
+    desc: "Apply & get your preferable jobs with all the requirements and get it.",
+  },
 
-   // home_two_feature_1
+  // home_two_feature_1
 
-   {
-      id: 1,
-      page: "home_2_feature_1",
-      item_bg: "location-card-1",
-      title: "Kelowna",
-   },
-   {
-      id: 2,
-      page: "home_2_feature_1",
-      item_bg: "location-card-2",
-      title: "West Kelowna",
-      data_delay_time: "0.1s",
-   },
-   {
-      id: 3,
-      page: "home_2_feature_1",
-      item_bg: "location-card-3",
-      title: "Lake Country",
-      data_delay_time: "0.2s",
-   },
-   {
-      id: 4,
-      page: "home_2_feature_1",
-      item_bg: "location-card-4",
-      title: "Vernon",
-   },
-   {
-      id: 5,
-      page: "home_2_feature_1",
-      item_bg: "location-card-5",
-      title: "Peachland",
-      data_delay_time: "0.1s",
-   },
-   {
-      id: 6,
-      page: "home_2_feature_1",
-      item_bg: "location-card-6",
-      title: "Penticton",
-      data_delay_time: "0.2s",
-   },
+  {
+    id: 1,
+    page: "home_2_feature_1",
+    item_bg: "location-card-1",
+    title: "Kelowna",
+  },
+  {
+    id: 2,
+    page: "home_2_feature_1",
+    item_bg: "location-card-2",
+    title: "West Kelowna",
+    data_delay_time: "0.1s",
+  },
+  {
+    id: 3,
+    page: "home_2_feature_1",
+    item_bg: "location-card-3",
+    title: "Lake Country",
+    data_delay_time: "0.2s",
+  },
+  {
+    id: 4,
+    page: "home_2_feature_1",
+    item_bg: "location-card-4",
+    title: "Vernon",
+  },
+  {
+    id: 5,
+    page: "home_2_feature_1",
+    item_bg: "location-card-5",
+    title: "Peachland",
+    data_delay_time: "0.1s",
+  },
+  {
+    id: 6,
+    page: "home_2_feature_1",
+    item_bg: "location-card-6",
+    title: "Penticton",
+    data_delay_time: "0.2s",
+  },
 
-   // home_two_feature_2
+  // home_two_feature_2
 
-   {
-      id: 1,
-      page: "home_two_feature_2",
-      img: featureImg_1,
-      title: "Explore & buy Home",
-      tag: "BUY HOME",
-      data_delay_time: "0.2s",
-   },
-   {
-      id: 2,
-      page: "home_two_feature_2",
-      img: featureImg_2,
-      title: "List & Sell quickly",
-      tag: "Sell Now",
-      data_delay_time: "0.1s",
-   },
-   {
-      id: 3,
-      page: "home_two_feature_2",
-      img: featureImg_3,
-      title: "Discover & get Rental",
-      tag: "RENT NOW",
-      data_delay_time: "0.2s",
-   },
+  {
+    id: 1,
+    page: "home_two_feature_2",
+    img: featureImg_1,
+    title: "Explore & buy Home",
+    tag: "BUY HOME",
+    data_delay_time: "0.2s",
+  },
+  {
+    id: 2,
+    page: "home_two_feature_2",
+    img: featureImg_2,
+    title: "List & Sell quickly",
+    tag: "Sell Now",
+    data_delay_time: "0.1s",
+  },
+  {
+    id: 3,
+    page: "home_two_feature_2",
+    img: featureImg_3,
+    title: "Discover & get Rental",
+    tag: "RENT NOW",
+    data_delay_time: "0.2s",
+  },
 
-   // home_two_feature_3
+  // home_two_feature_3
 
-   {
-      id: 1,
-      page: "home_two_feature_3",
-      icon: feature4Icon_1,
-      title: "Property Insurance",
-      desc: "Elit esse cillum dolo fugiat nulla tur nos ullamo.",
-   },
-   {
-      id: 2,
-      page: "home_two_feature_3",
-      icon: feature4Icon_2,
-      title: "Easy Payments",
-      desc: "quis nostrud exerct ullamo sucirity finibus ne derived.",
-   },
-   {
-      id: 3,
-      page: "home_two_feature_3",
-      icon: feature4Icon_3,
-      title: "Quick Process",
-      desc: "Duis aute irure dolor reprehe de Cicero's voluptat velit.",
-   },
+  {
+    id: 1,
+    page: "home_two_feature_3",
+    icon: feature4Icon_1,
+    title: "Property Insurance",
+    desc: "Elit esse cillum dolo fugiat nulla tur nos ullamo.",
+  },
+  {
+    id: 2,
+    page: "home_two_feature_3",
+    icon: feature4Icon_2,
+    title: "Easy Payments",
+    desc: "quis nostrud exerct ullamo sucirity finibus ne derived.",
+  },
+  {
+    id: 3,
+    page: "home_two_feature_3",
+    icon: feature4Icon_3,
+    title: "Quick Process",
+    desc: "Duis aute irure dolor reprehe de Cicero's voluptat velit.",
+  },
 
-   // home_3_feature_1
+  // home_3_feature_1
 
-/*    {
+  /*    {
       id: 1,
       page: "home_3_feature_1",
       icon: feature5Icon_1,
@@ -234,154 +237,153 @@ const feature_data: DataType[] = [
       btn: "Find Home",
       desc: "Explore homy’s 2 million+ homes and uncover your ideal living space.",
    }, */
-   {
-      id: 1,
-      page: "home_3_feature_1",
-      icon: feature5Icon_1,
-      title: "Fit Start Plan",
-      btn: "Start Free",
-      desc: "Enjoy 3 AI-personalized meal plans per week — tailored for your goals, totally free.",
-      data_delay_time: "0.3s"
-    },
-   {
-      id: 2,
-      page: "home_3_feature_1",
-      icon: feature5Icon_2,
-      title: "Buy a home",
-      btn: "Rent Home",
-      desc: "Discover a rental you'll love on homy, thanks to 35+ filters and tailored keywords.",
-      data_delay_time: "0.1s",
-   },
-   {
-      id: 3,
-      page: "home_3_feature_1",
-      icon: feature5Icon_3,
-      title: "Buy a home",
-      btn: "Sell Property",
-      desc: "List, sell, thrive – with our top-notch real estate agency. It’s super easy & fun.",
-      data_delay_time: "0.2s",
-   },
-   
+  {
+    id: 1,
+    page: "home_3_feature_1",
+    icon: feature5Icon_1,
+    title: "Fit Start Plan",
+    btn: "Start Free",
+    desc: "Enjoy 3 AI-personalized meal plans per week — tailored for your goals, totally free.",
+    data_delay_time: "0.3s",
+  },
+  {
+    id: 2,
+    page: "home_3_feature_1",
+    icon: feature5Icon_2,
+    title: "Buy a home",
+    btn: "Rent Home",
+    desc: "Discover a rental you'll love on homy, thanks to 35+ filters and tailored keywords.",
+    data_delay_time: "0.1s",
+  },
+  {
+    id: 3,
+    page: "home_3_feature_1",
+    icon: feature5Icon_3,
+    title: "Buy a home",
+    btn: "Sell Property",
+    desc: "List, sell, thrive – with our top-notch real estate agency. It’s super easy & fun.",
+    data_delay_time: "0.2s",
+  },
 
-   // home_three_feature_2
+  // home_three_feature_2
 
-   {
-      id: 1,
-      page: "home_three_feature_2",
-      icon: feature3Icon_4,
-      title: "Property Insurance",
-      desc: "Elit esse cillum dolo fugiat nulla tur nos ullamo.",
-   },
-   {
-      id: 2,
-      page: "home_three_feature_2",
-      icon: feature3Icon_5,
-      title: "Easy Payments",
-      desc: "quis nostrud exerct ullamo sucirity finibus ne derived.",
-   },
-   {
-      id: 3,
-      page: "home_three_feature_2",
-      icon: feature3Icon_6,
-      title: "Quick Process",
-      desc: "Duis aute irure dolor reprehe de Cicero's voluptat velit.",
-   },
+  {
+    id: 1,
+    page: "home_three_feature_2",
+    icon: feature3Icon_4,
+    title: "Property Insurance",
+    desc: "Elit esse cillum dolo fugiat nulla tur nos ullamo.",
+  },
+  {
+    id: 2,
+    page: "home_three_feature_2",
+    icon: feature3Icon_5,
+    title: "Easy Payments",
+    desc: "quis nostrud exerct ullamo sucirity finibus ne derived.",
+  },
+  {
+    id: 3,
+    page: "home_three_feature_2",
+    icon: feature3Icon_6,
+    title: "Quick Process",
+    desc: "Duis aute irure dolor reprehe de Cicero's voluptat velit.",
+  },
 
-   // home_4_feature_1
+  // home_4_feature_1
 
-   {
-      id: 1,
-      page: "home_4_feature_1",
-      icon: feature6Icon_1,
-      title: "Buy a home",
-      btn: "Find Home",
-      desc: "Consult The Best Nutrition For Your Child",
-   },
-   {
-      id: 2,
-      page: "home_4_feature_1",
-      icon: feature6Icon_2,
-      title: "",
-      btn: "Rent Home",
-      desc: "Consult Diet Foods That Are Suitable For Your Body",
-      data_delay_time: "0.1s",
-   },
-   {
-      id: 3,
-      page: "home_4_feature_1",
-      icon: feature6Icon_3,
-      title: "",
-      btn: "Sell Property",
-      desc: "Discover our supplement products",
-      data_delay_time: "0.2s",
-   },
-   {
-      id: 4,
-      page: "home_4_feature_1",
-      icon: feature6Icon_3,
-      title: "",
-      btn: "Sell Property",
-      desc: "List, sell, thrive – with our top-notch real estate agency. It’s super easy & fun.",
-      data_delay_time: "0.2s",
-   },
+  {
+    id: 1,
+    page: "home_4_feature_1",
+    icon: feature6Icon_1,
+    title: "Buy a home",
+    btn: "Find Home",
+    desc: "Consult The Best Nutrition For Your Child",
+  },
+  {
+    id: 2,
+    page: "home_4_feature_1",
+    icon: feature6Icon_2,
+    title: "",
+    btn: "Rent Home",
+    desc: "Consult Diet Foods That Are Suitable For Your Body",
+    data_delay_time: "0.1s",
+  },
+  {
+    id: 3,
+    page: "home_4_feature_1",
+    icon: feature6Icon_3,
+    title: "",
+    btn: "Sell Property",
+    desc: "Discover our supplement products",
+    data_delay_time: "0.2s",
+  },
+  {
+    id: 4,
+    page: "home_4_feature_1",
+    icon: feature6Icon_3,
+    title: "",
+    btn: "Sell Property",
+    desc: "List, sell, thrive – with our top-notch real estate agency. It’s super easy & fun.",
+    data_delay_time: "0.2s",
+  },
 
-   // home_5_feature_1
+  // home_5_feature_1
 
-   {
-      id: 1,
-      page: "home_5_feature_1",
-      item_bg: "home-5-feature-item-1",
-      title: "California",
-      desc: "1,230 Listing",
-   },
-   {
-      id: 2,
-      page: "home_5_feature_1",
-      item_bg: "home-5-feature-item-2",
-      title: "Miami",
-      desc: "1,140 Listing",
-      data_delay_time: "0.1s",
-   },
-   {
-      id: 3,
-      page: "home_5_feature_1",
-      item_bg: "home-5-feature-item-3",
-      title: "New York",
-      desc: "1,740 Listing",
-      data_delay_time: "0.2s",
-   },
-   {
-      id: 4,
-      page: "home_5_feature_1",
-      item_bg: "home-5-feature-item-4",
-      title: "Washington DC",
-      desc: "720 Listing",
-      data_delay_time: "0.3s",
-   },
+  {
+    id: 1,
+    page: "home_5_feature_1",
+    item_bg: "home-5-feature-item-1",
+    title: "California",
+    desc: "1,230 Listing",
+  },
+  {
+    id: 2,
+    page: "home_5_feature_1",
+    item_bg: "home-5-feature-item-2",
+    title: "Miami",
+    desc: "1,140 Listing",
+    data_delay_time: "0.1s",
+  },
+  {
+    id: 3,
+    page: "home_5_feature_1",
+    item_bg: "home-5-feature-item-3",
+    title: "New York",
+    desc: "1,740 Listing",
+    data_delay_time: "0.2s",
+  },
+  {
+    id: 4,
+    page: "home_5_feature_1",
+    item_bg: "home-5-feature-item-4",
+    title: "Washington DC",
+    desc: "720 Listing",
+    data_delay_time: "0.3s",
+  },
 
-   // home_6_feature_1
-   
-   {
-      id: 1,
-      page: "home_6_feature_1",
-      icon:feature7Icon_1,
-      title: "Property Insurance",
-      desc: "Elit esse cillum dol fug nulla tur nos ullamo.",
-   }, 
-   {
-      id: 2,
-      page: "home_6_feature_1",
-      icon:feature7Icon_2,
-      title: "Easy Payments",
-      desc: "quis nostrud exerct ulla security finibus ne derived.",
-   }, 
-   {
-      id: 3,
-      page: "home_6_feature_1",
-      icon:feature7Icon_3,
-      title: "Quick Process",
-      desc: "Duis aute irure do reprehe de Cicero's voluptat velit.",
-   },
-]
+  // home_6_feature_1
+
+  {
+    id: 1,
+    page: "home_6_feature_1",
+    icon: feature7Icon_1,
+    title: "Property Insurance",
+    desc: "Elit esse cillum dol fug nulla tur nos ullamo.",
+  },
+  {
+    id: 2,
+    page: "home_6_feature_1",
+    icon: feature7Icon_2,
+    title: "Easy Payments",
+    desc: "quis nostrud exerct ulla security finibus ne derived.",
+  },
+  {
+    id: 3,
+    page: "home_6_feature_1",
+    icon: feature7Icon_3,
+    title: "Quick Process",
+    desc: "Duis aute irure do reprehe de Cicero's voluptat velit.",
+  },
+];
 
 export default feature_data;

@@ -93,7 +93,7 @@ export default function ProcessSection() {
         }
 
         .heading {
-          font-size: 2rem;
+          font-size: 48px;
           font-weight: 300;
           color: #222;
         }
@@ -130,7 +130,7 @@ export default function ProcessSection() {
         .accordion-content {
           margin-top: 10px;
           color: #666;
-          font-size: 0.95rem;
+          font-size: 24px;
         }
 
         .accordion-content p {

@@ -171,7 +171,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   title: {
     textAlign: "center",
     fontWeight: 700,
-    fontSize: "28px",
+    fontSize: "48px",
     marginBottom: "30px",
     color: "#222",
   },
