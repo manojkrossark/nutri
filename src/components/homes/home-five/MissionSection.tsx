@@ -21,20 +21,51 @@ export default function MissionSection() {
   }, []);
 
   const tags = [
-  { label: "Balance", icon: faBalanceScale, rotation: "-10deg", top: 10, left: 30 },
-  { label: "Natural Skin Care", icon: faLeaf, rotation: "5deg", top: 60, left: 10 },
-  { label: "Nutritionist support", icon: faUserDoctor, rotation: "-4deg", top: 110, left: 40 },
-  { label: "Nutrition and Lifestyle", icon: faAppleAlt, rotation: "8deg", top: 170, left: 20 },
-  { label: "Meditation", icon: faSpa, rotation: "-6deg", top: 230, left: 5 },
-  { label: "Help women", icon: faVenus, rotation: "4deg", top: 290, left: 25 },
-];
-  
+    {
+      label: "Balance",
+      icon: faBalanceScale,
+      rotation: "-10deg",
+      top: 10,
+      left: 30,
+    },
+    {
+      label: "Natural Skin Care",
+      icon: faLeaf,
+      rotation: "5deg",
+      top: 60,
+      left: 10,
+    },
+    {
+      label: "Nutritionist support",
+      icon: faUserDoctor,
+      rotation: "-4deg",
+      top: 110,
+      left: 40,
+    },
+    {
+      label: "Nutrition and Lifestyle",
+      icon: faAppleAlt,
+      rotation: "8deg",
+      top: 170,
+      left: 20,
+    },
+    { label: "Meditation", icon: faSpa, rotation: "-6deg", top: 230, left: 5 },
+    {
+      label: "Help women",
+      icon: faVenus,
+      rotation: "4deg",
+      top: 290,
+      left: 25,
+    },
+  ];
+
   return (
     <section style={styles.section}>
       <div style={styles.missionBlock}>
         <h1 style={styles.title}>
-          Our mission it to <br/>
-          Advance the quality of<br/>
+          Our mission it to <br />
+          Advance the quality of
+          <br />
           nutrition for everyone
         </h1>
       </div>
@@ -56,7 +87,7 @@ export default function MissionSection() {
               Make an appointment with me for a trial consultation and I will
               identify the issues and put together the best plan for you.
             </p>
-         <form style={styles.form}>
+            {/* <form style={styles.form}>
   <div style={styles.inputRow}>
     <input type="text" placeholder="Your name" style={styles.input} />
     <input type="email" placeholder="Email address" style={styles.input} />
@@ -65,7 +96,7 @@ export default function MissionSection() {
   <label style={styles.privacy}>
     <input type="checkbox" /> Accept Privacy Policy
   </label>
-</form>
+</form> */}
           </div>
 
           {/* Right Floating Labels */}
@@ -89,7 +120,10 @@ export default function MissionSection() {
                   left: isMobile ? "auto" : `${tag.left}%`,
                 }}
               >
-                 <FontAwesomeIcon icon={tag.icon} style={{ marginRight: "8px" }} />
+                <FontAwesomeIcon
+                  icon={tag.icon}
+                  style={{ marginRight: "8px" }}
+                />
                 {tag.label}
               </div>
             ))}
@@ -137,7 +171,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   subTitle: {
     fontSize: "3rem",
-    color:"#fff",
+    color: "#fff",
     fontWeight: 400,
   },
   description: {
@@ -199,5 +233,4 @@ const styles: { [key: string]: React.CSSProperties } = {
     alignItems: "center",
     margin: "0.3rem",
   },
-  
 };
