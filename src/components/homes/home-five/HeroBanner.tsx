@@ -3,7 +3,7 @@ import Image from "next/image";
 import DropdownFive from "@/components/search-dropdown/home-dropdown/DropdownFive";
 
 import bannerImg_2 from "@/assets/images/assets/ils_05.svg";
-import bottomImg from "@/assets/images/image 1.png"; // Replace with your actual image
+import bottomImg from "@/assets/images/image 1.png"; // optional image
 
 const HeroBanner = () => {
   return (
@@ -20,6 +20,10 @@ const HeroBanner = () => {
           font-size: 38px;
           font-weight: 400;
           margin-bottom: 10px;
+        }
+
+        .fs-16 {
+          font-size: 16px;
         }
 
         .background-video {
@@ -55,6 +59,8 @@ const HeroBanner = () => {
           height: 100vh;
           z-index: 2;
           padding-bottom: 50px;
+          padding-left: 20px;
+          padding-right: 20px;
         }
 
         .get-started-section {
@@ -73,6 +79,7 @@ const HeroBanner = () => {
           background: black;
           border: none;
           height: 60px;
+          cursor: pointer;
         }
 
         .circle-icon-button {
@@ -109,23 +116,41 @@ const HeroBanner = () => {
           pointer-events: none;
         }
 
-        @media (max-width: 600px) {
-          .get-started-section {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-
-          .get-started-button {
-            width: 100%;
+        /* RESPONSIVE STYLES */
+        @media (max-width: 768px) {
+          .small-heading {
+            font-size: 24px;
+            line-height: 1.3;
             text-align: center;
           }
 
-          .circle-icon-button {
-            align-self: flex-end;
+          .fs-16 {
+            font-size: 14px;
+            text-align: center;
           }
 
           .content-wrapper {
             padding-bottom: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
+          .get-started-section {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          }
+
+          .get-started-button {
+            width: 100%;
+            font-size: 14px;
+            padding: 12px 20px;
+            text-align: center;
+          }
+
+          .circle-icon-button {
+            margin-top: 10px;
+            align-self: center;
           }
         }
       `}</style>
@@ -171,7 +196,10 @@ const HeroBanner = () => {
           alt="illustration"
           className="lazy-img shapes illustration"
         />
-       {/*  <Image
+
+        {/* Optional Bottom Image */}
+        {/* 
+        <Image
           src={bottomImg}
           alt="bottom illustration"
           style={{
@@ -186,8 +214,8 @@ const HeroBanner = () => {
             top: "36%",
             borderRadius: "8px",
           }}
-        /> */}
-        {/* Bottom Image */}
+        />
+        */}
       </div>
     </>
   );
