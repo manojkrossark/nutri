@@ -83,7 +83,14 @@ const LoginModal = ({ loginModal, setLoginModal }: any) => {
                       <h2>Welcome Back!</h2>
                       <p className="fs-20 color-dark">
                         Still don&apos;t have an account?{" "}
-                        <Link href="#">Sign up</Link>
+                        <Link
+                          href="#"
+                          onClick={() => {
+                            setActiveTab(1);
+                          }}
+                        >
+                          Sign up
+                        </Link>
                       </p>
                     </div>
                     <LoginForm
@@ -101,7 +108,15 @@ const LoginModal = ({ loginModal, setLoginModal }: any) => {
                     <div className="text-center mb-20">
                       <h2>Register</h2>
                       <p className="fs-20 color-dark">
-                        Already have an account? <Link href="#">Login</Link>
+                        Already have an account?{" "}
+                        <Link
+                          href="#"
+                          onClick={() => {
+                            setActiveTab(0);
+                          }}
+                        >
+                          Login
+                        </Link>
                       </p>
                     </div>
                     <RegisterForm />
