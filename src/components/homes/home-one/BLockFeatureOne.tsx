@@ -30,9 +30,13 @@ const BLockFeatureOne = () => {
                     src={item.icon ? item.icon : ""}
                     alt={item.title}
                     className="lazy-img m-auto icon rounded-circle"
-                    width={150} // or adjust to match your design
-                    height={150}
-                    style={{ objectFit: "cover", borderRadius: "50%" }}
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50%",
+                      width: "200px",
+                      height: "200px",
+                      boxShadow: "rgb(108, 117, 125) 0px 4px 12px",
+                    }}
                   />
                   <div className="fs-16 text-uppercase fw-500 fs-text mt-35 md-mt-30 mb-20">
                     {item.title}
