@@ -39,6 +39,41 @@ const goalOptions = [
   { value: "muscle_gain", text: "Muscle Gain" },
   { value: "diabetes_control", text: "Diabetes Control" },
   { value: "general_health", text: "General Health" },
+  { value: "eye_health_optimization", text: "Eye Health Optimization" },
+  { value: "improve_visual_acuity", text: "Improve Visual Acuity" },
+  { value: "relieve_dry_eyes", text: "Relieve Dry Eyes" },
+  {
+    value: "enhance_contrast_sensitivity",
+    text: "Enhance Contrast Sensitivity",
+  },
+  { value: "boost_color_vision", text: "Boost Color Vision" },
+  { value: "strengthen_visual_field", text: "Strengthen Visual Field" },
+  { value: "protect_macular_health", text: "Protect Macular Health" },
+  { value: "improve_night_vision", text: "Improve Night Vision" },
+  { value: "reduce_visual_fatigue", text: "Reduce Visual Fatigue" },
+  { value: "support_retinal_health", text: "Support Retinal Health" },
+  { value: "diabetes_control", text: "Control Diabetes (Vision-Linked)" },
+  { value: "reduce_screen_strain", text: "Reduce Screen-Induced Strain" },
+  { value: "eye_brain_coordination", text: "Improve Eye-Brain Coordination" },
+  { value: "anti_inflammatory_eye_diet", text: "Anti-Inflammatory Eye Diet" },
+  {
+    value: "cognitive_visual_performance",
+    text: "Cognitive & Visual Performance",
+  },
+  {
+    value: "antioxidant_vision_support",
+    text: "Antioxidant Support for Vision",
+  },
+  {
+    value: "weight_loss_eye_nutrition",
+    text: "Weight Loss with Eye Nutrition",
+  },
+  {
+    value: "muscle_gain_vision_focus",
+    text: "Muscle Gain (with Vision Focus)",
+  },
+  { value: "post_lasik_support", text: "Post-LASIK Nutrition Support" },
+  { value: "hydration_ocular_comfort", text: "Hydration for Ocular Comfort" },
 ];
 
 const dietOptions = [
@@ -50,6 +85,26 @@ const dietOptions = [
   { value: "keto", text: "Keto Diet" },
   { value: "low_carb", text: "Low Carbs" },
   { value: "balanced", text: "Balanced" },
+  { value: "lacto_vegetarian", text: "Lacto-Vegetarian" },
+  { value: "ovo_vegetarian", text: "Ovo-Vegetarian" },
+  { value: "lacto_ovo_vegetarian", text: "Lacto-Ovo Vegetarian" },
+  { value: "pescatarian", text: "Pescatarian" },
+  { value: "egg_free", text: "Egg-Free" },
+  { value: "nut_free", text: "Nut-Free" },
+  { value: "soy_free", text: "Soy-Free" },
+  { value: "sugar_free", text: "Sugar-Free" },
+  { value: "low_sodium", text: "Low-Sodium" },
+  { value: "diabetic_friendly", text: "Diabetic-Friendly" },
+  { value: "high_protein", text: "High-Protein" },
+  { value: "low_fodmap", text: "Low-FODMAP" },
+  { value: "halal", text: "Halal" },
+  { value: "jain", text: "Jain" },
+  { value: "ayurvedic", text: "Ayurvedic" },
+  { value: "paleo", text: "Paleo" },
+  { value: "intermittent_fasting", text: "Intermittent Fasting Friendly" },
+  { value: "no_red_meat", text: "No Red Meat" },
+  { value: "no_processed_foods", text: "No Processed Foods" },
+  { value: "allergy_safe", text: "Allergy-Safe" },
 ];
 
 const languageOptions = [
