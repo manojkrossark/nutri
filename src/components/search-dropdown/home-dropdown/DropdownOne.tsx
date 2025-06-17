@@ -5,6 +5,7 @@ import NiceSelect from "@/ui/NiceSelect";
 import Link from "next/link";
 import Image from "next/image";
 import { BASE_API_URL } from "@/utils/constants";
+import { set } from "react-hook-form";
 type MealType = {
   mealPlan: {
     location: string;
@@ -19,6 +20,7 @@ type MealType = {
         items: {
           name: string;
           imageUrl: string;
+          ingredients: string[];
         }[];
         notes?: string;
       }[];
@@ -132,6 +134,10 @@ const DropdownOne = ({ style }: any) => {
   const [loading, setLoading] = useState(false);
   const [selectedDay, setSelectedDay] = useState("");
   const [showPermissionOverlay, setShowPermissionOverlay] = useState(false);
+  const [isFetchingLocation, setIsFetchingLocation] = useState(false);
+  const [showIngredients, setShowIngredients] = useState(false);
+  const [ingredientsList, setIngredientsList] = useState<string[]>([]);
+  const [ingredientMealName, setIngredientMealName] = useState<string>("");
 
   // Handle selection change for the dropdowns
   const handleChange = (setter: Function) => (item: any) => {
@@ -155,14 +161,17 @@ const DropdownOne = ({ style }: any) => {
       const city =
         data.address.city || data.address.town || data.address.village;
       setLocation(city || "Current Location");
+      setIsFetchingLocation(false);
     } catch (e) {
       console.error("Reverse geocode error:", e);
       setLocation("Current Location");
+      setIsFetchingLocation(false);
     }
   };
 
   // Get current geolocation
   const getLocation = () => {
+    setIsFetchingLocation(true);
     navigator.geolocation.getCurrentPosition(
       updateLocation,
       () => setLocation("Unable to retrieve location"),
@@ -257,6 +266,11 @@ const DropdownOne = ({ style }: any) => {
     setSelectedDay((prev) => (prev === day ? "" : day));
   };
 
+  const handleViewIngredients = (mealObj: any, item: any) => {
+    setIngredientMealName(item.name);
+    setIngredientsList(item.ingredients || []);
+    setShowIngredients(true);
+  };
   return (
     <>
       <style jsx>{`
@@ -492,6 +506,63 @@ const DropdownOne = ({ style }: any) => {
           </button>
         </div>
       )}
+      {showIngredients && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.5)",
+            zIndex: 99999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              background: "#fff",
+              borderRadius: "16px",
+              padding: "32px 24px",
+              minWidth: "320px",
+              maxWidth: "90vw",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+              position: "relative",
+            }}
+          >
+            <button
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 16,
+                background: "none",
+                border: "none",
+                fontSize: 22,
+                cursor: "pointer",
+              }}
+              onClick={() => setShowIngredients(false)}
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <h5 style={{ marginBottom: 12 }}>
+              Ingredients for{" "}
+              <span style={{ color: "#198754" }}>{ingredientMealName}</span>
+            </h5>
+            {ingredientsList.length > 0 ? (
+              <ul style={{ paddingLeft: 18 }}>
+                {ingredientsList.map((ing, idx) => (
+                  <li key={idx}>{ing}</li>
+                ))}
+              </ul>
+            ) : (
+              <div>No ingredients listed.</div>
+            )}
+          </div>
+        </div>
+      )}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -610,7 +681,11 @@ const DropdownOne = ({ style }: any) => {
                     : "text-uppercase search-btn"
                 }`}
               >
-                {loading ? "Loading..." : "Search"}
+                {isFetchingLocation
+                  ? "Fetching Location..."
+                  : loading
+                  ? "Loading..."
+                  : "Search"}
               </button>
             </div>
           </div>
@@ -652,7 +727,7 @@ const DropdownOne = ({ style }: any) => {
             {/* Day Selector */}
             <div className="section-divider">
               <div className="d-flex gap-3 justify-content-between mb-4 weekday-strip">
-                {meal.mealPlan.days.map((dayObj, idx) => {
+                {meal?.mealPlan?.days?.map((dayObj, idx) => {
                   const date = new Date();
                   date.setDate(date.getDate() + idx);
                   const dayShort = date.toLocaleDateString("en-US", {
@@ -707,6 +782,21 @@ const DropdownOne = ({ style }: any) => {
                                       />
                                     </div>
                                   )}
+                                  {/* View Ingredients Button */}
+                                  {item.ingredients && (
+                                    // <div className="meal-card-footer mt-10">
+                                    <button
+                                      type="button"
+                                      className="btn-view mt-10"
+                                      onClick={() =>
+                                        handleViewIngredients(mealObj, item)
+                                      }
+                                      style={{ cursor: "pointer" }}
+                                    >
+                                      View Ingredients
+                                    </button>
+                                    // </div>
+                                  )}
                                 </li>
                               ))}
                             </ul>
@@ -716,14 +806,14 @@ const DropdownOne = ({ style }: any) => {
                                 <strong>Note:</strong> {mealObj.notes}
                               </p>
                             )}
-                            <div className="meal-card-footer">
+                            {/* <div className="meal-card-footer">
                               <a href="#" className="btn-view">
                                 View Ingredients
                               </a>
                               <a href="#" className="btn-circle">
                                 <i className="bi bi-arrow-up-right"></i>
                               </a>
-                            </div>
+                            </div> */}
                             {mealIndex < dayObj.meals.length - 1 && <hr />}
                           </div>
                         ))}
