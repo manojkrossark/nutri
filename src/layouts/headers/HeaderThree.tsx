@@ -78,7 +78,7 @@ const HeaderThree = () => {
                 </Link>
               </div>
 
-              {/* <div className="right-widget ms-auto me-3 me-lg-0 order-lg-4">
+              <div className="right-widget ms-auto me-3 me-lg-0 order-lg-4">
                 <ul className="d-flex align-items-center style-none">
                   <li
                     className="d-flex align-items-center login-btn-one"
@@ -102,7 +102,7 @@ const HeaderThree = () => {
                     </Link>
                   </li>
                 </ul>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
